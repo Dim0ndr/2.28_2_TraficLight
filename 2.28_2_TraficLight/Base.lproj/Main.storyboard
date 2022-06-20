@@ -64,6 +64,13 @@
                                     <constraint firstItem="GpS-Zw-eyc" firstAttribute="top" relation="lessThanOrEqual" secondItem="hel-IX-P0R" secondAttribute="bottom" constant="150" id="DB5-Kg-ras"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bI-Wx-xJR">
+                                <rect key="frame" x="16" y="629" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
@@ -74,15 +81,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenRound" destination="hgF-kT-0fx" id="4Fl-fx-3rG"/>
-                        <outlet property="redRound" destination="n3D-g9-Lf2" id="XTn-4f-jeq"/>
+                        <outlet property="countText" destination="8bI-Wx-xJR" id="Riw-v5-rjX"/>
                         <outlet property="trafficLightButton" destination="GpS-Zw-eyc" id="tHl-Yf-8Ib"/>
-                        <outlet property="yellowRound" destination="KPC-wj-6Xw" id="Iox-wq-lS9"/>
+                        <outletCollection property="lightRounds" destination="n3D-g9-Lf2" collectionClass="NSMutableArray" id="deF-pu-Ecd"/>
+                        <outletCollection property="lightRounds" destination="KPC-wj-6Xw" collectionClass="NSMutableArray" id="uk3-oG-rAD"/>
+                        <outletCollection property="lightRounds" destination="hgF-kT-0fx" collectionClass="NSMutableArray" id="6cF-AS-OWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
+            <point key="canvasLocation" x="136.80000000000001" y="121.92118226600985"/>
         </scene>
     </scenes>
     <resources>
@@ -91,6 +99,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
