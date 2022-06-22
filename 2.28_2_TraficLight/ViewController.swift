@@ -33,22 +33,22 @@ class ViewController: UIViewController {
         print("Высота стороны для viewDidLoad =", lightRounds[0].frame.height)
         
     }
-//    override func viewDidLayoutSubviews() {
-//        
-//        lightRounds.forEach {
-//            $0.layer.cornerRadius = $0.frame.height / 2
-//        }
-//        
-//        print("Высота стороны для viewDidLayoutSubviews =", lightRounds[0].frame.height)
-//        
-//    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidLayoutSubviews() {
+
         lightRounds.forEach {
             $0.layer.cornerRadius = $0.frame.height / 2
         }
+
+        print("Высота стороны для viewDidLayoutSubviews =", lightRounds[0].frame.height)
+
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(true)
+//        lightRounds.forEach {
+//            $0.layer.cornerRadius = $0.frame.height / 2
+//        }
+//    }
 
 
 //    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -72,11 +72,20 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func pushGreen() {
+        lightRounds[2].alpha = lightRounds[2].alpha < 1 ? 1 : 0.3
+        
+    }
+    @IBAction func pushYellow() {
+        lightRounds[1].alpha = lightRounds[1].alpha < 1 ? 1 : 0.3
+//        print(lightRounds[0].alpha)
+        
+    }
     @IBAction func trafficLightButtonTapped() {
         
-//        if trafficLightButton.currentTitle == "START" {
-//            trafficLightButton.setTitle("NEXT", for: .normal)
-//        }
+        if trafficLightButton.currentTitle == "START" {
+            trafficLightButton.setTitle("NEXT", for: .normal)
+        }
         
         for (index,light) in lightRounds.enumerated() {
             
